@@ -50,3 +50,9 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
+
+# Vs Code 
+.vscode
+project.code-workspace
+
+
