@@ -5,40 +5,42 @@
 void display(){
 
     //for the christmas tree
+   // glRotatef(45,0,0,0.1);
     glClear(GL_COLOR_BUFFER_BIT);
     glColor3f(0.0,0.6,0.0);
+    glRotatef(2,0,0,0.0);
     glBegin(GL_TRIANGLES);
         glVertex2d(500,650);
         glVertex2d(450,600);
         glVertex2d(550,600);
     glEnd();
-    glFlush();
-    glBegin(GL_TRIANGLES);
-        glVertex2d(500,650);
-        glVertex2d(430,550);
-        glVertex2d(570,550);
-    glEnd();
-    glFlush();
-    glBegin(GL_TRIANGLES);
-        glVertex2d(500,650);
-        glVertex2d(410,500);
-        glVertex2d(590,500);
-    glEnd();
-    glFlush();
-    glBegin(GL_TRIANGLES);
-        glVertex2d(500,650);
-        glVertex2d(390,450);
-        glVertex2d(610,450);
-    glEnd();
-    glFlush();
-    glColor3f(0.8,0.5,0.1);
-    glBegin(GL_QUADS);
-        glVertex2d(465+50,450);
-        glVertex2d(435+50,450);
-        glVertex2d(435+50,420);
-        glVertex2d(465+50,420);
-    glEnd();
-    glFlush();
+    // glFlush();
+    // glBegin(GL_TRIANGLES);
+    //     glVertex2d(500,650);
+    //     glVertex2d(430,550);
+    //     glVertex2d(570,550);
+    // glEnd();
+    // glFlush();
+    // glBegin(GL_TRIANGLES);
+    //     glVertex2d(500,650);
+    //     glVertex2d(410,500);
+    //     glVertex2d(590,500);
+    // glEnd();
+    // glFlush();
+    // glBegin(GL_TRIANGLES);
+    //     glVertex2d(500,650);
+    //     glVertex2d(390,450);
+    //     glVertex2d(610,450);
+    // glEnd();
+    // glFlush();
+    // glColor3f(0.8,0.5,0.1);
+    // glBegin(GL_QUADS);
+    //     glVertex2d(465+50,450);
+    //     glVertex2d(435+50,450);
+    //     glVertex2d(435+50,420);
+    //     glVertex2d(465+50,420);
+    // glEnd();
+    // glFlush();
 
     // //for the dead tree
     // glBegin(GL_POLYGON);
@@ -87,6 +89,7 @@ void display(){
     //     glVertex2d(713,230);
     // glEnd();
     // glFlush();
+    glutSwapBuffers();
 }
 
 void init(){
@@ -98,10 +101,10 @@ void init(){
 
 int main(int argc,char** argv){
     glutInit(&argc,argv);
-    glutInitDisplayMode(GLUT_SINGLE|GLUT_RGB);
+    glutInitDisplayMode(GLUT_DOUBLE|GLUT_RGB);
     glutInitWindowPosition(0,0);
     glutInitWindowSize(1280,720);
-    glutCreateWindow("Moon");
+    glutCreateWindow("@testrotate");
     init();
     glutDisplayFunc(display);
     glutMainLoop();

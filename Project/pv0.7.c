@@ -215,7 +215,8 @@ void ground(){
     glEnd();
     //angle+=45;
     glPopMatrix();
-    angle+=0.2;glPushMatrix();
+    angle+=0.2;
+    glPushMatrix();
     //glTranslated(-100,-200,0);
     glRotated(angle,0.0,0.0,0.1);
     glBegin(GL_TRIANGLE_FAN);// the moon circle
